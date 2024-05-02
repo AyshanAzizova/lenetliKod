@@ -4,7 +4,7 @@ import { createTodo, deleteTodo, getAllTodo, getSingleTodo, updateTodo } from '.
 
 const todoRoutes = express.Router()
 
-// todoRoutes.use(protectRoutes)
+todoRoutes.use(protectRoutes)
 
 todoRoutes.get("/", getAllTodo)
 todoRoutes.get("/:id", getSingleTodo)
