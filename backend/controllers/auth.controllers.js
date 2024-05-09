@@ -29,7 +29,7 @@ export const signup = async (request,response)=>{
         response.status(404).send({error:"internal server error"})
     }
 }
-export const login = async (request,response)=>{
+export const login = async (request,response)=>{    
     try {
         const {email,password} =request.body
         if (!email || !password) {
@@ -49,7 +49,7 @@ export const login = async (request,response)=>{
         generateTokenAndSetCookie(user._id,response)
         response.status(201).send(user)
     } catch (error) {
-        console.log(`Error in signup controller:${error.message}`);QX
+        console.log(`Error in signup controller:${error.message}`);
         response.status(404).send({error:"internal server error"})
     }
 }

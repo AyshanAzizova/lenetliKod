@@ -1,6 +1,12 @@
 import express from 'express'
 import protectRoutes from '../middlewares/protectRoutes.js'
-import { createTodo, deleteTodo, getAllTodo, getSingleTodo, updateTodo } from '../controllers/todoControllers.js'
+import {
+    createTodo,
+    deleteTodo,
+    getAllTodo,
+    getSingleTodo,
+    updateTodo
+} from '../controllers/todoControllers.js'
 
 const todoRoutes = express.Router()
 
